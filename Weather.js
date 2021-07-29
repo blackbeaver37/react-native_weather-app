@@ -61,7 +61,7 @@ const weatherOptions = {
     },
 };
 
-export default function Weather({ temp, condition }) {
+const Weather = ({ temp, condition }) => {
     return (
         <LinearGradient
             colors={weatherOptions[condition].gradient}
@@ -86,7 +86,7 @@ export default function Weather({ temp, condition }) {
             </View>
         </LinearGradient>
     );
-}
+};
 
 Weather.propTypes = {
     temp: PropTypes.number.isRequired,
@@ -139,3 +139,5 @@ const styles = StyleSheet.create({
         flex: 1,
     },
 });
+
+export default Weather;
